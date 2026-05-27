@@ -13,8 +13,12 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^13.1.10",
+    "@astrojs/react": "^5.0.5",
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.8",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "shaders": "^2.5.128",
     "tailwindcss": "^4.2.2"
   }
 }

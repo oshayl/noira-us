@@ -1,11 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import NoiraHeroShader from '../components/NoiraHeroShader';
 ---
 
 <Layout title="O'Shay Lighten — Operated by Noira">
   <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-20">
-    <div class="max-w-3xl">
+  <section class="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-20 overflow-hidden">
+    <!-- Shader Background -->
+    <div class="absolute inset-0 -z-10">
+      <NoiraHeroShader client:only="react" />
+    </div>
+    
+    <div class="relative z-10 max-w-3xl">
       <p class="text-cream-dim text-xs tracking-[0.3em] uppercase mb-6 fade-up">O'SHAY LIGHTEN</p>
       <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif leading-[0.95] mb-8 fade-up fade-up-d1">
         I run my business<br/>
@@ -23,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
         </a>
       </div>
     </div>
-    <div class="mt-16 text-cream-dim/40 text-xs tracking-widest fade-up fade-up-d4">
+    <div class="relative z-10 mt-16 text-cream-dim/40 text-xs tracking-widest fade-up fade-up-d4">
       <span class="cursor-blink">▌</span> NOIRA ONLINE
     </div>
   </section>
